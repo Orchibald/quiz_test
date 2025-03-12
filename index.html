@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квіз</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-header">
+            <h1>Квіз-опитування</h1>
+            <p>Дайте відповіді на 5 запитань та отримайте результат</p>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="progress-text" id="progress-text">Питання 1 з 5</div>
+        </div>
+
+        <div id="question-container">
+        </div>
+
+        <div class="navigation">
+            <button id="prev-btn" class="btn btn-prev" disabled>Назад</button>
+            <button id="next-btn" class="btn">Далі</button>
+        </div>
+
+        <div id="registration-form" class="registration-form">
+            <h2>Реєстрація</h2>
+            <p>Будь ласка, заповніть форму, щоб отримати результати</p>
+            
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="name">Ім'я</label>
+                    <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
+                    <div class="error">Будь ласка, введіть своє ім'я</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Введіть ваш email">
+                    <div class="error">Будь ласка, введіть коректний email</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone">
+                    <div class="error">Будь ласка, введіть коректний номер телефону</div>
+                </div>
+                
+                <button type="submit" class="btn" id="submit-btn">Відправити</button>
+            </form>
+        </div>
+
+        <div id="results-container" class="results-container">
+            <h2>Дякуємо за участь!</h2>
+            <p>Ваші відповіді успішно відправлені.</p>
+            <button id="restart-btn" class="btn">Почати знову</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
